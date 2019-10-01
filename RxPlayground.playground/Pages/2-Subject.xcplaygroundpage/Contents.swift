@@ -56,7 +56,8 @@ behavior.subscribe(onNext: { print("behavior - \($0)") })
 
 behavior.onNext("Keempat")
 behavior.onNext("Kelima")
-// notes about BehaviorSubject.value()
+//: Also, an advantage for BehaviorSubject is that you can get it last value by using _value()_ method
+print("Last value on BehaviorSubject: \(behavior.value())")
 
 print("==============================")
 /*:
