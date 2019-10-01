@@ -24,16 +24,7 @@ let timer = Observable<Int>
  
  _But, you doesn't need to handle all those condition when subscribing an observable_
  */
-number.subscribe(
-        onNext: { print($0) },
-        onError: { print($0) },
-        onCompleted: { print("complete") },
-        onDisposed: { print("disposed") }
-)
-
-timer.subscribe(onNext: { (value) in
-    print("angka: \(value)")
-})
+// TODO: subscribe an observable here
 /*:
  [Next topic: **Subject**](@next)
  */
