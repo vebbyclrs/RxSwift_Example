@@ -1,4 +1,4 @@
-//: [Previous: **Introduction**](@previous)
+//: [Previous: __Introduction__](@previous)
 /*:
  # Observable
  _PS: Please build RxExample scheme first, using Cmd + B_
@@ -10,45 +10,43 @@ import RxSwift
 //: Observable will emitting its value, one-by-one
 /// Observable that will emit three values
 let number = Observable.of("satu", "dua", "tiga")
-let number2 = Observable.of(["satu", "dua", "tiga"])
-/// Observable that will emitting integer, starting from 0 for every seconds
-let timer = Observable<Int>
-    .timer(RxTimeInterval.seconds(1),
-           period: RxTimeInterval.seconds(1),
-           scheduler: MainScheduler.instance)
+
+// From an array
+//let number = Observable.from(["satu", "dua", "tiga"])
+
+// By declares each event one by one
+//let number = Observable<String>.create { AnyObserver<_> -> Disposable in
+//    observer.on(.next("satu"))
+//    observer.on(.next("dua"))
+//    observer.on(.next("tiga"))
+//    observer.on(.completed)
+//
+//    return Disposables.create()
+//}
 
 /*:
- Subscribing an observable will has 4 condition:
- * **onNext** : When observable is emitting each of its value
- * **onError** : When an error is happen during emitting/subscribing
- * **onCompleted** : When observable is done emitting all its value
- * **onDisposed** : When subscriber is disposed
+ Subscribing an observable has 4 condition:
+ * __onNext__ : When observable is emitting each of its value
+ * __onError__ : When an error is happen during emitting/subscribing
+ * __onCompleted__ : When observable is done emitting all its value
+ * __onDisposed__ : When subscriber is disposed
  
  _But, you doesn't need to handle all those condition when subscribing an observable_
  */
-let disposeBag: DisposeBag? = DisposeBag() // nanti coba di nil
+let disposeBag: DisposeBag = DisposeBag()
+
 number.subscribe(
         onNext: { print($0) },
         onError: { print($0) },
         onCompleted: { print("complete") },
         onDisposed: { print("disposed") }
-).disposed(by: disposedBag)
+    ).disposed(by: disposeBag)
 
-number2.subscribe(
-        onNext: { print($0) },
-        onError: { print($0) },
-        onCompleted: { print("complete") },
-        onDisposed: { print("disposed") }
-).disposed(by: disposedBag)
-
-timer.subscribe(onNext: { (value) in
-    print("angka: \(value)")
-})
+// You doesn't need to handle all kind of events
+//number.subscribe(
+//        onNext: { print($0) }
+//).disposed(by: disposeBag)
 
 /*:
- Wait, you just saying about disposing something, what does it mean?
- */
-
-/*:
- [Next topic: **Subject**](@next)
+ [Next topic: __Subject__](@next)
  */

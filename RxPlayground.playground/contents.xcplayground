@@ -5,6 +5,5 @@
         <page name='1-Observable'/>
         <page name='2-Subject'/>
         <page name='3-Operators'/>
-        <page name='Examples'/>
     </pages>
 </playground>
