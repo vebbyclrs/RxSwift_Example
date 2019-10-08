@@ -30,8 +30,10 @@ let behavior = BehaviorSubject<String>(value: "Initial")
 
 /*:
  There's another kind of subject: ReplaySubject.
+ 
  But we rarely using it, so it won't be covered in this subject. :(
- Reference for further information about it.
+ 
+ Reference for further information about it. [Reactivex.io Docs](http://reactivex.io/documentation/subject.html)
  */
 
 //: [Next: __Operators__](@next)
