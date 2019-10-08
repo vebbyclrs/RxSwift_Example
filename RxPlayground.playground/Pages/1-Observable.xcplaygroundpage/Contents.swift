@@ -22,6 +22,15 @@ let number = Observable.of("satu", "dua", "tiga")
  */
 let disposeBag: DisposeBag = DisposeBag()
 
+
+//: We also can create __Observable__ by creating events one-by-on on its ___Observer___
+
+/*:
+ ಠ_ಠ
+ 
+ What do you mean by _Observer_? Also what the heck is ___Disposable___ that included over there?
+ */
+
 /*:
  [Next topic: __Subject__](@next)
  */
