@@ -15,7 +15,7 @@ let number = Observable.of("satu", "dua", "tiga")
 //let number = Observable.from(["satu", "dua", "tiga"])
 
 // By declares each event one by one
-//let number = Observable<String>.create { AnyObserver<_> -> Disposable in
+//let number = Observable<String>.create { observer -> Disposable in
 //    observer.on(.next("satu"))
 //    observer.on(.next("dua"))
 //    observer.on(.next("tiga"))
