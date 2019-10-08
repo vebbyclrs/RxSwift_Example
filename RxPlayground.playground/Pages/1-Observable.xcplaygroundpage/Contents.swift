@@ -14,16 +14,6 @@ let number = Observable.of("satu", "dua", "tiga")
 // From an array
 //let number = Observable.from(["satu", "dua", "tiga"])
 
-// By declares each event one by one
-//let number = Observable<String>.create { AnyObserver<_> -> Disposable in
-//    observer.on(.next("satu"))
-//    observer.on(.next("dua"))
-//    observer.on(.next("tiga"))
-//    observer.on(.completed)
-//
-//    return Disposables.create()
-//}
-
 /*:
  Subscribing an observable has 4 condition:
  * __onNext__ : When observable is emitting each of its value
@@ -46,6 +36,21 @@ number.subscribe(
 //number.subscribe(
 //        onNext: { print($0) }
 //).disposed(by: disposeBag)
+
+//: We also can create __Observable__ by creating events one-by-on on its ___Observer___
+//let number = Observable<String>.create { AnyObserver<_> -> Disposable in
+//    observer.on(.next("satu"))
+//    observer.on(.next("dua"))
+//    observer.on(.next("tiga"))
+//    observer.on(.completed)
+//
+//    return Disposables.create()
+//}
+/*:
+ಠ_ಠ
+
+What do you mean by _Observer_? Also what the heck is ___Disposable___ that included over there?
+*/
 
 /*:
  [Next topic: __Subject__](@next)
