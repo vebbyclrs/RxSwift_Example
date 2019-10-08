@@ -38,7 +38,7 @@ number.subscribe(
 //).disposed(by: disposeBag)
 
 //: We also can create __Observable__ by creating events one-by-on on its ___Observer___
-//let number = Observable<String>.create { AnyObserver<_> -> Disposable in
+//let number = Observable<String>.create { observer -> Disposable in
 //    observer.on(.next("satu"))
 //    observer.on(.next("dua"))
 //    observer.on(.next("tiga"))
