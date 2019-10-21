@@ -3,6 +3,7 @@
  # Observable
  _PS: Please build RxExample scheme first, using Cmd + B_
  */
+import Foundation
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 import RxSwift
@@ -10,9 +11,6 @@ import RxSwift
 //: Observable will emitting its value, one-by-one
 /// Observable that will emit three values
 let number = Observable.of("satu", "dua", "tiga")
-
-// From an array
-//let number = Observable.from(["satu", "dua", "tiga"])
 
 /*:
  Subscribing an observable has 4 condition:
@@ -25,32 +23,27 @@ let number = Observable.of("satu", "dua", "tiga")
  */
 let disposeBag: DisposeBag = DisposeBag()
 
-number.subscribe(
-        onNext: { print($0) },
-        onError: { print($0) },
-        onCompleted: { print("complete") },
-        onDisposed: { print("disposed") }
-    ).disposed(by: disposeBag)
+//number.subscribe(
+//    onNext: { nextValue in
+//        print($0)
+//    },
+//    onError: { error in
+//        print("error: \(error)")
+//    },
+//    onCompleted: { _ in
+//        print("complete")
+//    },
+//    onDisposed: { _ in
+//        print("disposed")
+//    })
+//    .disposed(by: disposeBag)
 
 // You doesn't need to handle all kind of events
 //number.subscribe(
-//        onNext: { print($0) }
-//).disposed(by: disposeBag)
-
-//: We also can create __Observable__ by creating events one-by-on on its ___Observer___
-//let number = Observable<String>.create { observer -> Disposable in
-//    observer.on(.next("satu"))
-//    observer.on(.next("dua"))
-//    observer.on(.next("tiga"))
-//    observer.on(.completed)
-//
-//    return Disposables.create()
-//}
-/*:
-ಠ_ಠ
-
-What do you mean by _Observer_? Also what the heck is ___Disposable___ that included over there?
-*/
+//    onNext: { value in
+//        print("only onNext: \(value)")
+//    })
+//    .disposed(by: disposeBag)
 
 /*:
  [Next topic: __Subject__](@next)
