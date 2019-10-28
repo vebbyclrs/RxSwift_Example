@@ -3,6 +3,7 @@
  # Observable
  _PS: Please build RxExample scheme first, using Cmd + B_
  */
+import Foundation
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 import RxSwift
@@ -21,15 +22,6 @@ let number = Observable.of("satu", "dua", "tiga")
  _But, you doesn't need to handle all those condition when subscribing an observable_
  */
 let disposeBag: DisposeBag = DisposeBag()
-
-
-//: We also can create __Observable__ by creating events one-by-on on its ___Observer___
-
-/*:
- ಠ_ಠ
- 
- What do you mean by _Observer_? Also what the heck is ___Disposable___ that included over there?
- */
 
 /*:
  [Next topic: __Subject__](@next)

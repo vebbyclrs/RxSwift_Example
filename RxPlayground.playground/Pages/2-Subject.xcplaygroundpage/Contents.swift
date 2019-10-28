@@ -15,17 +15,19 @@ import RxSwift
 let newsSubject = PublishSubject<String>()
 
 /*:
- Let's start with PublishSubject:
+ Let's start with __PublishSubject__:
  
  _This subject, will only emits new elements to its subscriber_
  */
 let publish = PublishSubject<String>()
+
 /*:
- Next is BehaviorSubject:
- 
- _BehaviorSubject needs an initial value, and it'll emit latest value (and all new elements) to its subscriber_
- */
+Next is __BehaviorSubject__:
+
+_BehaviorSubject needs an initial value, and it'll emit latest value (and all new elements) to its subscriber_
+*/
 let behavior = BehaviorSubject<String>(value: "Initial")
+
 //: Also, an advantage for BehaviorSubject is that you can get it last value by using _value()_ method
 
 /*:
