@@ -29,14 +29,14 @@ newsSubject.onNext("Big news today!")
  _This subject, will only emits new elements to its subscriber_
  */
 let publish = PublishSubject<String>()
-publish.onNext("Pertama")
-publish.onNext("Kedua")
-publish.onNext("Ketiga")
-
-publish.subscribe(onNext: { print("publish - \($0)") })
-
-publish.onNext("Keempat")
-publish.onNext("Kelima")
+//publish.onNext("Pertama")
+//publish.onNext("Kedua")
+//publish.onNext("Ketiga")
+//
+//publish.subscribe(onNext: { print("publish - \($0)") })
+//
+//publish.onNext("Keempat")
+//publish.onNext("Kelima")
 
 /*:
 Next is __BehaviorSubject__:

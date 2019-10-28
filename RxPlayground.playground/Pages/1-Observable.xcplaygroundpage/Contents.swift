@@ -25,15 +25,15 @@ let disposeBag: DisposeBag = DisposeBag()
 
 //number.subscribe(
 //    onNext: { nextValue in
-//        print($0)
+//        print(nextValue)
 //    },
 //    onError: { error in
 //        print("error: \(error)")
 //    },
-//    onCompleted: { _ in
+//    onCompleted: {
 //        print("complete")
 //    },
-//    onDisposed: { _ in
+//    onDisposed: {
 //        print("disposed")
 //    })
 //    .disposed(by: disposeBag)
